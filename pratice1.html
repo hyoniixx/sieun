@@ -57,17 +57,16 @@
     <script type="text/babel">
         // 연습5) 아래 color 값이 "r"이면 "red", "g"이면 "green", "b"이면 "blue" 배경색을 <div> 태그에 적용해 화면에 표시하세요.
         //       (100 x 100 크기)
-        const color = 'g';
-        const background = color === 'r' ? 'red' : color === 'g' ? 'green' : color === 'b' ? 'blue' : 'white'
+        const color = 'r';
+        const background = color === 'r' ? 'red' : color === 'g' ? 'green' : color === 'b' ? 'blue' : 'white';
         const style = {
-            backgroundColor: color === 'r' ? 'red' : color === 'g' ? 'green' : color === 'b' ? 'blue' : 'white',
+            backgroundColor: background,
             width: 100,
             height: 100
         }
 
         const colorDiv = <div style={style}></div>
         ReactDOM.createRoot(document.querySelector('#root5')).render(colorDiv);
-
     </script>
 </body>
 
