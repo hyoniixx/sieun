@@ -24,8 +24,8 @@ function UserInfo() {
       <label htmlFor='email'>이메일: </label>
       <input id='email' name='userEmail' type='email' value={user.userEmail} onChange={handleUserChange}/><br/>
       <h4>프로필</h4>
-      <p>{user.userName} ({user.userAge}세)</p>
-      <p>{user.userEmail}</p>
+      <p>😊{user.userName} ({user.userAge}세)</p>
+      <p>📩{user.userEmail}</p>
     </>
   )
 }
