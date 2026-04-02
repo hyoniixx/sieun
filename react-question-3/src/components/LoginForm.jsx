@@ -28,11 +28,10 @@ function LoginForm() {
     console.log(buttonRef.current.disabled)
     if (loginInfo.userId && loginInfo.userPwd) {
       buttonRef.current.disabled = false
+    } else {
+      buttonRef.current.disabled = true
     }
-
   })
-
-
 
 
   return (
@@ -49,8 +48,8 @@ function LoginForm() {
       <input type='checkbox' name='check' checked={loginInfo.check} onChange={() => {
         dispatch({ type: 'CHANGECHECK' })
       }} /><label>로그인 상태 유지</label><br />
-      <button ref={buttonRef} disabled onClick={() => {
-
+      <button ref={buttonRef} onClick={() => {
+        console.log('ddd');
         alert(`로그인 시도! 사용자: ${loginInfo.userId} 기억하기:${loginInfo.check ? '예' : '아니오'}`)
       }}>로그인</button>
     </>
